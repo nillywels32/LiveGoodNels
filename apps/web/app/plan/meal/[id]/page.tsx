@@ -5,7 +5,7 @@ import { useParams, useRouter } from 'next/navigation';
 import { ProtectedRoute } from '@/components/auth/ProtectedRoute';
 import { supabase } from '@/lib/supabase/client';
 import { useAuthStore } from '@/stores/authStore';
-import type { PlannedMeal, MealFeedback } from '../../../../../packages/types/src';
+import type { PlannedMeal, MealFeedback } from '@goodlifenels/types';
 
 export default function MealDetailPage() {
   const params = useParams();

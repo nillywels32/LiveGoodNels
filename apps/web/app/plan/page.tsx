@@ -5,7 +5,7 @@ import { ProtectedRoute } from '@/components/auth/ProtectedRoute';
 import { supabase } from '@/lib/supabase/client';
 import { useAuthStore } from '@/stores/authStore';
 import { useRouter } from 'next/navigation';
-import type { MealPlan, PlannedMeal } from '../../../packages/types/src';
+import type { MealPlan, PlannedMeal } from '@goodlifenels/types';
 
 const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
