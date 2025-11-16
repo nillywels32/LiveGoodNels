@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { QueryProvider } from "@/lib/providers/QueryProvider";
+import { AuthProvider } from "@/lib/providers/AuthProvider";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 const inter = Inter({
@@ -23,12 +24,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
         <QueryProvider>
-          <div className="flex min-h-screen">
-            <Sidebar />
-            <main className="flex-1 bg-background">
-              {children}
-            </main>
-          </div>
+          <AuthProvider>
+            <div className="flex min-h-screen">
+              <Sidebar />
+              <main className="flex-1 bg-background">
+                {children}
+              </main>
+            </div>
+          </AuthProvider>
         </QueryProvider>
       </body>
     </html>

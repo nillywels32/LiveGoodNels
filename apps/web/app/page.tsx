@@ -1,6 +1,14 @@
+'use client';
+
+import { ProtectedRoute } from '@/components/auth/ProtectedRoute';
+import { useRouter } from 'next/navigation';
+
 export default function Home() {
+  const router = useRouter();
+
   return (
-    <div className="p-8">
+    <ProtectedRoute>
+      <div className="p-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2" style={{ color: 'var(--color-off-black)' }}>
           Good morning! ☀️
@@ -17,7 +25,10 @@ export default function Home() {
         <p className="mb-6" style={{ color: 'var(--color-dark-gray)' }}>
           Let&apos;s create your weekly meal plan! It takes just 10 minutes to answer a few questions.
         </p>
-        <button className="btn-primary">
+        <button
+          className="btn-primary"
+          onClick={() => router.push('/questionnaire')}
+        >
           Start Questionnaire
         </button>
       </div>
@@ -37,6 +48,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </ProtectedRoute>
   );
 }
