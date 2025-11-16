@@ -153,5 +153,3 @@ backend = "postgres"
 # Experimental features may be overridden at any time
 # Read more here: https://supabase.com/docs/guides/getting-started/local-development#experimental-features
 [experimental]
-# Configures Postgres (WALG) type extensions
-webhooks_enabled = false
