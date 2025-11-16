@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --version:*)",
+      "Bash(npm --version)",
+      "Bash(git --version)",
+      "Bash(mkdir:*)",
+      "Bash(git init:*)",
+      "Bash(git config:*)",
+      "Bash(npx create-next-app:*)",
+      "Bash(npx create-expo-app@latest . --template blank-typescript)",
+      "Bash(dir:*)",
+      "Bash(npm install:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nInitial GoodLifeNels project setup\n\n- Complete monorepo structure\n- Shared TypeScript types package\n- Next.js web app with Tailwind and Supabase\n- React Native mobile app with Expo\n- Supabase database schema and migrations\n- AI Edge Functions with Claude integration\n- Comprehensive documentation\n\n🤖 Generated with Claude Code\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

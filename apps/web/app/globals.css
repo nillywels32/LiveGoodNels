@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  /* GoodLifeNels Brand Colors */
+  /* Primary Colors */
+  --color-forest-green: #2C5F2D;
+  --color-ocean-blue: #1B4965;
+  --color-earth-brown: #8B4513;
+  --color-pure-white: #F8F9FA;
+
+  /* Accent Colors */
+  --color-vibrant-lime: #9ACD32;
+  --color-sunset-orange: #FF8C42;
+  --color-berry-purple: #6A4C93;
+
+  /* Neutrals */
+  --color-soft-beige: #F5F5DC;
+  --color-light-gray: #E5E5E5;
+  --color-dark-gray: #4A4A4A;
+  --color-off-black: #2D2D2D;
+
+  /* Semantic Colors */
+  --background: var(--color-pure-white);
+  --foreground: var(--color-dark-gray);
+}
+
+@theme inline {
+  /* Custom Color Palette */
+  --color-primary: var(--color-forest-green);
+  --color-secondary: var(--color-ocean-blue);
+  --color-accent: var(--color-vibrant-lime);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Typography */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Spacing (8px base unit) */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+
+  /* Border Radius */
+  --radius: 16px;
+  --radius-sm: 8px;
+  --radius-lg: 24px;
+
+  /* Shadows */
+  --shadow-card: 0 2px 4px rgba(0, 0, 0, 0.05), 0 8px 16px rgba(0, 0, 0, 0.08);
+  --shadow-button: 0 4px 8px rgba(44, 95, 45, 0.2), 0 0 16px rgba(154, 205, 50, 0.3);
+  --shadow-glow: 0 0 20px rgba(154, 205, 50, 0.6);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--color-off-black);
+    --foreground: var(--color-pure-white);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+/* Utility Classes */
+.card {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  background: var(--color-background);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-pure-white);
+  box-shadow: var(--shadow-button);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #245124;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  border: 2px solid var(--color-secondary);
+  color: var(--color-secondary);
+  background: transparent;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--color-secondary);
+  color: var(--color-pure-white);
+}

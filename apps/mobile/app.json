@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "GoodLifeNels",
+    "slug": "goodlifenels",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#2C5F2D"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.goodlifenels.app",
+      "infoPlist": {
+        "NSCalendarsUsageDescription": "This app needs access to your calendar to add meal prep events.",
+        "NSRemindersUsageDescription": "This app needs access to your reminders to create shopping lists.",
+        "NSUserNotificationsUsageDescription": "This app sends notifications for daily check-ins and weekly questionnaires."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#2C5F2D"
+      },
+      "package": "com.goodlifenels.app",
+      "permissions": [
+        "android.permission.READ_CALENDAR",
+        "android.permission.WRITE_CALENDAR"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id-here"
+      }
+    },
+    "plugins": [
+      "expo-calendar",
+      "expo-notifications"
+    ]
+  }
+}

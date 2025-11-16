@@ -1,0 +1,10 @@
+# Assets Directory
+
+This directory should contain:
+
+- icon.png (1024x1024) - App icon
+- splash.png (2048x2048) - Splash screen
+- adaptive-icon.png (1024x1024) - Android adaptive icon
+- favicon.png (48x48) - Web favicon
+
+Placeholder assets with GoodLifeNels branding (#2C5F2D green background) should be created for initial development.

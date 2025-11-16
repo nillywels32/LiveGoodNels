@@ -1,0 +1,26 @@
+{
+  "name": "@goodlifenels/types",
+  "version": "1.0.0",
+  "description": "Shared TypeScript types for GoodLifeNels mobile, web, and backend applications",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "typescript",
+    "types",
+    "goodlifenels"
+  ],
+  "author": "GoodLifeNels",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  }
+}
