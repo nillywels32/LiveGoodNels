@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { supabase } from '@/lib/supabase/client';
 import { useAuthStore } from '@/stores/authStore';
 import { useRouter } from 'next/navigation';
-import type { QuestionnaireResponseData, WorkoutSchedule, SocialEvent, WorkSchedule, WorkDay } from '@packages/types';
+import type { QuestionnaireResponseData, WorkoutSchedule, SocialEvent, WorkSchedule, WorkDay } from '../../../../packages/types/src';
 
 const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] as const;
 
